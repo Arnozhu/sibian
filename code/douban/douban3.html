@@ -7,20 +7,14 @@
 </head>
 <style>
 
-    h2, p {
-        margin: 0;
-    }
-
-    ul,ol{
+    h2, p,ul,ol {
         margin: 0;
         padding: 0;
+    }
+
+   ul {
         list-style: none;
     }
-
-    img {
-        border: 0px;
-    }
-
     a {
         text-decoration: none;
     }
@@ -67,7 +61,7 @@
         margin-bottom: 12px;
     }
 
-    .left-list ul li {
+    .left ul li {
         margin-bottom: 8px;
     }
 
@@ -228,17 +222,18 @@
 
     .list2 {
         float: left;
-        width: 265px;
-        height: 388px;
+        width: 270px;
+        height: 304px;
     }
 
     .list2 ol li {
         width: 265px;
         height: 25px;
-        display: inline-block;
         border-bottom:1px solid #eaeaea;
         margin-bottom: 5px;
         font-size: 12px;
+        float: left;
+        list-style-position: inside;
     }
 
 </style>
@@ -247,7 +242,6 @@
     <div class="film ">
         <div class="left">
             <h2><a href="#">电影</a></h2>
-            <div class="left-list">
                 <ul>
                     <li><a href="#">影讯&购票</a></li>
                     <li><a href="#">选电影</a></li>
@@ -258,7 +252,6 @@
                     <li><a href="#">预告片</a></li>
                     <li><a href="#">问答</a></li>
                 </ul>
-            </div>
         </div>
         <div class="main ">
             <h2>正在热映······<span class="p1">(<a href="#"> 更多 </a>)</span></h2>
@@ -373,7 +366,6 @@
             </div>
             <div class="list2">
                 <h2>近期热门 ······<span>(<a href="#"> 更多</a>)</span></h2>
-                <div class="list2">
                     <ol>
                         <li><a href="#">幽冥</a></li>
                         <li><a href="#">幽冥</a></li>
@@ -386,7 +378,6 @@
                         <li><a href="#">幽冥</a></li>
                         <li><a href="#">幽冥</a></li>
                     </ol>
-                </div>
             </div>
         </div>
     </div>
