@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>douban3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style>
+
+    h2, p {
+        margin: 0;
+    }
+
+    ul,ol{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        border: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #27a;
+    }
+
+    a:hover {
+        background-color: #27a;
+        color: white;
+    }
+
+    ly:after {
+        display: block;
+        content: "";
+        cloth: both;
+        visibility: hidden;
+    }
+
+    .header {
+        background: #f7f7f7;
+        width: 1349px;
+        height: 756px;
+        padding:40px 0 20px;
+    }
+
+    .film {
+        width: 950px;
+        height: 566px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .left {
+        width: 100px;
+        height: 272px;
+        display: inline;
+        float: left;
+    }
+
+    .left h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .left-list ul li {
+        margin-bottom: 8px;
+    }
+
+    .main {
+        width: 535px;
+        height: 526px;
+        float: left;
+    }
+
+    h2 {
+        font-size: 15px;
+        color: #072;
+        margin: 0 0 12px 0;
+    }
+
+    h2 span {
+        font-size: 12px;
+        color: grey;
+    }
+
+    h2 span a {
+        font-size: 12px;
+    }
+
+    .main li {
+        float: left;
+        width: 132.672px;
+        height: 233px;
+        margin-bottom: 40px;
+    }
+
+    .pic {
+        width: 132.672px;
+        height: 145px;
+        text-align: center;
+    }
+
+    .title {
+
+        display: block;
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .title a {
+        color: black;
+    }
+
+    .rating {
+        width: 132.672px;
+        height: 19px;
+        text-align: center;
+        margin-top: 6px;
+        margin-bottom: 5px;
+    }
+
+    .allstar0 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -55px no-repeat;
+    }
+
+    .allstar1 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -44px no-repeat;
+    }
+
+    .allstar2 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -44px no-repeat;
+    }
+
+    .allstar3 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -11px no-repeat;
+    }
+
+    .allstar4 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -22px no-repeat;
+    }
+
+    .allstar5 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -44px no-repeat;
+    }
+
+    .allstar6 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -44px no-repeat;
+    }
+
+    .allstar7 {
+        width: 55px;
+        height: 11px;
+        display: inline-block;
+        background: url(image/img1/1.png) 0 -11px no-repeat;
+    }
+
+    .main-b a {
+        width: 48px;
+        display: block;
+        padding: 4px 10px;
+        text-align: center;
+        background-color: #1c8bd0;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 2px;
+        margin: auto;
+
+    }
+
+    i {
+        color: sandybrown;
+        display: inline-block;
+        margin-left: 7px;
+        width: 17px;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    .right {
+        width: 265px;
+        height: 566px;
+        float: left;
+        margin-left: 50px;
+    }
+
+    .list1 {
+        width: 265px;
+        height: 168px;
+        margin-bottom: 20px;
+    }
+
+    .list1 ul li {
+        float: left;
+        font-size: 12px;
+        display: inline-block;
+        width: 48px;
+        height: 19px;
+        margin-bottom: 5px;
+    }
+
+    .list2 {
+        float: left;
+        width: 265px;
+        height: 388px;
+    }
+
+    .list2 ol li {
+        width: 265px;
+        height: 25px;
+        display: inline-block;
+        border-bottom:1px solid #eaeaea;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+</style>
+<body>
+<div class="header">
+    <div class="film ">
+        <div class="left">
+            <h2><a href="#">电影</a></h2>
+            <div class="left-list">
+                <ul>
+                    <li><a href="#">影讯&购票</a></li>
+                    <li><a href="#">选电影</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">影评</a></li>
+                    <li><a href="#">预告片</a></li>
+                    <li><a href="#">问答</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main ">
+            <h2>正在热映······<span class="p1">(<a href="#"> 更多 </a>)</span></h2>
+            <ul>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2390687452.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">摆渡人</a></div>
+                    <div class="rating ly"><span class="allstar0"></span><i>4.4</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img5.doubanio.com/view/movie_poster_cover/spst/public/p2404720316.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">铁道飞虎</a></div>
+                    <div class="rating ly"><span class="allstar1"></span><i>5.7</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2394573821.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">长城</a></div>
+                    <div class="rating ly"><span class="allstar2"></span><i>5.5</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2397337958.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">血战钢锯岭</a></div>
+                    <div class="rating ly"><span class="allstar3"></span><i>8.8</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2404553168.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">罗曼蒂克消亡史...</a></div>
+                    <div class="rating ly"><span class="allstar4"></span><i>7.7</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2405285938.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">绝对控制</a></div>
+                    <div class="rating ly"><span class="allstar5"></span><i>5.5</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2404556021.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">掠夺者</a></div>
+                    <div class="rating ly"><span class="allstar6"></span><i>5.3</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#"><img
+                            src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2395733377.jpg"
+                            alt="电影图片"></a>
+                    </div>
+                    <div class="title "><a href="#">你的名字</a></div>
+                    <div class="rating ly"><span class="allstar7"></span><i>8.6</i></div>
+                    <div class="main-b"><a href="#">选座够票</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="list1">
+                <h2>影片分类 ······<span> (<a href="#"> 更多</a>)</span></h2>
+                <ul>
+                    <li><a href="#">爱情</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧</a></li>
+                    <li><a href="#">喜剧大陆</a></li>
+                </ul>
+            </div>
+            <div class="list2">
+                <h2>近期热门 ······<span>(<a href="#"> 更多</a>)</span></h2>
+                <div class="list2">
+                    <ol>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                        <li><a href="#">幽冥</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
